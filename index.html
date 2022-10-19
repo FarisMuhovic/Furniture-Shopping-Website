@@ -13,11 +13,20 @@
   </head>
   <body>
     <nav>
+      <div class="hamburger-menu">
+        <input type="checkbox" id="hamburger">
+        <label for="hamburger" class="hamlabel">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </label>
+        </button>
+      </div>
       <a href="#" class="logo">
         <h2>FURNICO</h2>
         <i class="fa-solid fa-couch"></i>
       </a>
-      <ul class="main-navigation">
+      <ul class="main-navigation" id="main-navigation">
         <li class="shop-nav">
           <p>Shop</p>
           <ul class="dropdownmenu menu1">
@@ -49,10 +58,14 @@
             <li>Contact Us</li>
           </ul>
         </li>
+        <!--ONLY FOR PHONE !!!-->
+        <li>
+          <button id="hamburger-exit">X</button>
+        </li>
       </ul>
       <div class="searchbox">
         <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        <input type="text">
+        <input type="text" class="exitbtn">
       </div>
       <ul class="user-area">
         <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
