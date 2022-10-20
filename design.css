@@ -236,9 +236,6 @@ nav {
 .dropdownmenu li:hover {
   font-weight: 600;
 }
-.mobile-exit-btn {
-  display: inline;
-}
 /* === MEDIA QUERIES === */
 @media (max-width: 1200px) {
   nav {
@@ -312,6 +309,9 @@ nav {
     padding: 0;
     min-width: 0;
     text-align: center;
+  }
+  .mobile-exit-btn {
+    display: inline;
   }
 }
 @media (max-width: 500px) {
