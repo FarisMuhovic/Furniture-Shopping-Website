@@ -1,7 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 10 version
+*/
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 :root {
@@ -16,12 +24,17 @@ a {
   color: inherit;
 }
 nav {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 250px 40px 200px 40px 4fr 40px 2fr;
   grid-template-columns: 250px 200px 4fr 2fr;
+  -ms-grid-rows: 40px;
   grid-template-rows: 40px;
   padding: 20px 75px;
   gap: 40px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px solid var(--fontcolor);
   background-color: var(--detailscolor);
   color: var(--fontcolor);
@@ -90,13 +103,20 @@ nav {
   -o-transition: 0.4s;
 }
 .logo , .main-navigation , .searchbox , .user-area{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .logo {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 15px;
-  justify-self: start;
+  -ms-grid-column-align: start;
+      justify-self: start;
 }
 .logo h2 {
   color: var(--fontcolor);
@@ -107,7 +127,9 @@ nav {
   font-size: 30px;
 }
 .main-navigation {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-size: 20px;
   position: relative;
 }
@@ -169,7 +191,9 @@ nav {
   text-align: center;
 }
 .searchbox {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   justify-self: flex-start;
   width: 70%;
   min-width: 300px;
@@ -203,15 +227,23 @@ nav {
 }
 .user-area {
   justify-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 15px;
 }
 .user-area i {
   font-size: 20px;
 }
 .shop-nav:hover .menu1 , .ideas-nav:hover .menu2 , .about-nav:hover .menu3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .dropdownmenu {
@@ -220,8 +252,12 @@ nav {
   top: 80px;
   height: 60px;
   padding: 20px 75px;
-  align-items: center;
-  justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background-color: var(--detailscolor);
   color: var(--fontcolor);
   left: 0;
@@ -246,16 +282,21 @@ nav {
 }
 @media (max-width: 1050px) {
   nav {
+    -ms-grid-columns: 1fr 0 1fr 0 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 50px 0 50px;
     grid-template-rows: 50px 50px;
     gap: 0;
     padding: 10px 30px;
   }
   .hamburger-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .logo {
-    justify-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   .main-navigation {
     display: none;
@@ -269,54 +310,132 @@ nav {
     width: 100%;
   }
   .mobile-main-navs {
-    justify-content: center;
-    align-items: flex-start;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: black;
-    width: 30vw;
+    background-color: var(--detailscolor);
+    border-right: 2px solid var(--fontcolor);
+    width: 500px;
     height: 100vh;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 50px;
     grid-template-columns: 1fr 1fr 1fr 50px;
+    -ms-grid-rows: 50px auto;
     grid-template-rows: 50px auto;
-    animation: slideopen 0.5s;
-    -webkit-animation: slideopen 0.5s;
-} 
-  @keyframes slideopen {
-    from {width: 0;}
-    to {width: 30vw;}
   }
   .menu1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .dropdownmenu {
     position: fixed;
     display: none;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     top: 50px;
     height: 100%;
     gap: 25px;
-    padding: 20px 0;
-    align-items: flex-start;
-    background-color: gray;
-    width: 30vw;
+    padding: 20px 50px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    background-color: var(--detailscolor);
+    width: 500px;
     font-size: 14px;
     grid-column: 1 / -1;
+    -ms-grid-row: 2;
     grid-row: 2;
+    border-right: 2px solid var(--fontcolor);
   }
   .dropdownmenu li {
     padding: 0;
     min-width: 0;
-    text-align: center;
+    border-bottom: 1px solid var(--fontcolor);
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    font-size: 16px;
+  }
+  .btn-box {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 1px solid var(--fontcolor);
   }
   .mobile-exit-btn {
-    display: inline;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: var(--fontcolor);
+    font-size: 25px;
+    height: 100%;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+  .mobile-exit-btn:hover {
+    background-color: var(--fontcolor);
+    color: var(--detailscolor);
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+  .shop-nav , .ideas-nav , .about-nav{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: 1px solid var(--fontcolor);
+  }
+  .menu1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .shop-nav::after {
+    height: 0;
   }
 }
 @media (max-width: 500px) {
   nav {
-    padding: 5px;
+    padding: 5px 20px;
     gap: 0 10px;
   }
   .searchbox {
@@ -347,5 +466,13 @@ nav {
   .line1 , .line2 , .line3 {
     min-width: 20px;
     height: 3px;
-  } 
+  }
+  .mobile-main-navs , .dropdownmenu {
+    width: 100%;
+    border: none;
+    padding: 0;
+  }
+  .dropdownmenu {
+    padding: 15px;
+  }
 }
