@@ -16,16 +16,22 @@ const items = document.querySelectorAll(".item");
 
 let translateVar = 0;
 let translateValue = 0;
+let itemcounter = 0;
 if (window.innerWidth < 600) {
-  translateValue += 335;
+  translateValue += 174;
+  itemcounter += 8;
 } else {
   translateValue += 533;
+  itemcounter += 6;
 }
 const itemGap = 10;
 let countRight = 0;
 
 rightBtn.addEventListener("click", () => {
-  if (translateVar > -translateValue * 6 && countRight < 6) {
+  if (
+    translateVar > -translateValue * itemcounter &&
+    countRight < itemcounter
+  ) {
     countRight++;
     translateVar -= translateValue;
     document.documentElement.style.setProperty(
@@ -50,8 +56,8 @@ leftBtn.addEventListener("click", () => {
       translateVar + "px"
     );
   } else {
-    translateVar = -translateValue * 6 + itemGap;
-    countRight = 6;
+    translateVar = -translateValue * itemcounter + itemGap;
+    countRight = itemcounter;
     document.documentElement.style.setProperty(
       "--itemtranslate",
       translateVar + "px"
