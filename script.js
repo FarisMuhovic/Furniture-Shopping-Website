@@ -17,13 +17,15 @@ const items = document.querySelectorAll(".item");
 let translateVar = 0;
 let translateValue = 0;
 let itemcounter = 0;
-if (window.innerWidth < 600) {
-  translateValue += 174;
-  itemcounter += 8;
-} else {
-  translateValue += 533;
-  itemcounter += 6;
-}
+window.onload = () => {
+  if (window.innerWidth < 600) {
+    translateValue += 174;
+    itemcounter += 8;
+  } else {
+    translateValue += 533;
+    itemcounter += 6;
+  }
+};
 const itemGap = 10;
 let countRight = 0;
 
@@ -64,4 +66,3 @@ leftBtn.addEventListener("click", () => {
     );
   }
 });
-// change instead of pixels to percentage for more responsivness
