@@ -1,0 +1,54 @@
+[{
+  "image": "https://www.thespruce.com/thmb/KUpUkVPGdrySHTlPe5AHT0h08kk=/3360x1890/smart/filters:no_upscale()/signs-to-replace-your-couch-4165258-hero-5266fa7b788c41f6a02f24224a5de29b.jpg",
+  "title": "Couch",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  "price": "$350"
+},
+{
+  "image": "https://cdn.sklum.com/ie/1274432/brion-3-seater-sofa-bed-in-linen.jpg",
+  "title": "Sofa",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  "price": "$650"
+},
+{
+  "image": "https://cb2.scene7.com/is/image/CB2/GPGwynethBclChrBlcWhtSHF18_1x1/$web_pdp_main_carousel_xs$/190905023639/gwyneth-boucle-chair.jpg",
+  "title": "Chair",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  "price": "$900"
+},
+{
+  "image": "https://cdn.sklum.com/ie/1145704/rectangular-dining-table-in-mdf-and-metal-180x90-cm-kogi-style.jpg",
+  "title": "Table",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  "price": "$330"
+},
+{
+  "image": "https://cb2.scene7.com/is/image/CB2/DondraQueenBedSHS21_1x1/$web_pdp_main_carousel_xs$/210203123041/dondra-teak-queen-bed.jpg",
+  "title": "Bed",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  "price": "$150"
+},
+{
+  "image": "https://www.ikea.com/om/en/images/products/lauters-table-lamp-ash-white__0879402_pe714879_s5.jpg",
+  "title": "Lamp",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  "price": "$250"
+},
+{
+  "image": "https://cdn11.bigcommerce.com/s-31djhj4ixx/images/stencil/747x560/products/1220/2167/Mocka-Chelsea-Six-Drawer-Wide-1__64326.1.jpg",
+  "title": "Drawer",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  "price": "$150"
+},
+{
+  "image": "https://steamerystockholm.com/site/assets/product_img/276/cache/space_saving_hanger_lifestyle_01_w1300.jpg",
+  "title": "Hanger",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  "price": "$650"
+},
+{
+  "image": "https://secure.img1-fg.wfcdn.com/im/89209442/compr-r85/9046/90462683/default.jpg",
+  "title": "Closet",
+  "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+  "price": "$350"
+}]

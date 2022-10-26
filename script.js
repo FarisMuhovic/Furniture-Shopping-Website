@@ -10,6 +10,30 @@ hamburgerExit.addEventListener("click", () => {
   hamburgerExit.classList.remove("mobile-exit-btn");
 });
 
+const getItems = async () => {
+  const response = await fetch("database.json");
+  const data = response.json();
+  return data;
+};
+const carouselBox = document.getElementById("caroseul-explore");
+getItems()
+  .then(data => {
+    data.forEach(item => {
+      console.log(item);
+      carouselBox.innerHTML += `<div class="item">
+      <img src=${item.image} class="image">
+      <div class="textitem">
+        <p class="description-item">${item.description}</p>
+        <p id="article-name">${item.title}</p>
+        <p id="article-price">${item.price}</p>
+      </div>
+    </div>`;
+    });
+  })
+  .catch(error => {
+    console.log("You got an error", error);
+  });
+
 const rightBtn = document.getElementById("right-btn");
 const leftBtn = document.getElementById("left-btn");
 const items = document.querySelectorAll(".item");
@@ -19,7 +43,7 @@ let translateValue = 0;
 let itemcounter = 0;
 window.onload = () => {
   if (window.innerWidth < 600) {
-    translateValue += 174;
+    translateValue += 164.5;
     itemcounter += 8;
   } else {
     translateValue += 533;

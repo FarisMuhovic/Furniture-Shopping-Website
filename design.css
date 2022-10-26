@@ -607,6 +607,10 @@ footer {
   color: white;
   border: none;
 }
+.image {
+  width: 523px;
+  height: 523px;
+}
 /* === MEDIA QUERIES === */
 @media (max-width: 1200px) {
   nav {
@@ -903,6 +907,10 @@ footer {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
+  }
+  .image {
+    width: 160px;
+    height: 160px;
   }
 }
 @media (max-width: 500px) {
