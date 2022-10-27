@@ -4,6 +4,7 @@ const mainNavs = document.getElementById("main-navigation");
 hamburgerBtn.addEventListener("click", () => {
   mainNavs.classList.add("mobile-main-navs");
   hamburgerExit.classList.add("mobile-exit-btn");
+  bgCurtain.style.display = "flex";
 });
 hamburgerExit.addEventListener("click", () => {
   mainNavs.classList.remove("mobile-main-navs");
@@ -17,11 +18,11 @@ const getItems = async () => {
 };
 const carouselBox = document.getElementById("caroseul-explore");
 const searchField = document.getElementById("search-field");
+const bgCurtain = document.getElementById("bg");
 carouselBox.addEventListener("click", () => {});
 getItems()
   .then(data => {
     data.forEach(item => {
-      console.log(item);
       carouselBox.innerHTML += `<div class="item">
       <img src=${item.image} class="image">
       <div class="textitem">
@@ -36,7 +37,16 @@ getItems()
     console.log("You got an error", error);
   });
 const inputBox = document.getElementById("input-box");
-inputBox.addEventListener("click", () => {});
+inputBox.addEventListener("click", () => {
+  searchField.style.display = "flex";
+  bgCurtain.style.display = "flex";
+});
+bgCurtain.addEventListener("click", () => {
+  bgCurtain.style.display = "none";
+  searchField.style.display = "none";
+  mainNavs.classList.remove("mobile-main-navs");
+  hamburgerExit.classList.remove;
+});
 const rightBtn = document.getElementById("right-btn");
 const leftBtn = document.getElementById("left-btn");
 const items = document.querySelectorAll(".item");
@@ -92,4 +102,23 @@ leftBtn.addEventListener("click", () => {
       translateVar + "px"
     );
   }
+});
+inputBox.addEventListener("keyup", () => {
+  getItems().then(data => {
+    data.forEach(item => {
+      let inputValue = inputBox.value;
+      inputValue = inputValue.toLowerCase();
+      if (item.title.includes(inputValue) && inputValue.length > 0) {
+        console.log(item.title);
+        searchField.innerHTML = `<div class="search-items">
+        <img src=${item.image} class="search-img">
+        <div class="textitem">
+          <p class="description-item">${item.description}</p>
+          <p id="article-name">${item.title}</p>
+          <p id="article-price">${item.price}</p>
+        </div>
+      </div>`;
+      }
+    });
+  });
 });
