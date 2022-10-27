@@ -16,6 +16,8 @@ const getItems = async () => {
   return data;
 };
 const carouselBox = document.getElementById("caroseul-explore");
+const searchField = document.getElementById("search-field");
+carouselBox.addEventListener("click", () => {});
 getItems()
   .then(data => {
     data.forEach(item => {
@@ -33,7 +35,8 @@ getItems()
   .catch(error => {
     console.log("You got an error", error);
   });
-
+const inputBox = document.getElementById("input-box");
+inputBox.addEventListener("click", () => {});
 const rightBtn = document.getElementById("right-btn");
 const leftBtn = document.getElementById("left-btn");
 const items = document.querySelectorAll(".item");
