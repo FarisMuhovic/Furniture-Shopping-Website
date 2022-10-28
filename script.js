@@ -112,7 +112,7 @@ inputBox.addEventListener("keyup", () => {
         console.log(item.title);
         searchField.innerHTML = `<div class="search-items">
         <img src=${item.image} class="search-img">
-        <div class="textitem">
+        <div class="textitemsearch">
           <p class="description-item">${item.description}</p>
           <p id="article-name">${item.title}</p>
           <p id="article-price">${item.price}</p>

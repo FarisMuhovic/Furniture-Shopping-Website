@@ -395,6 +395,16 @@ nav {
   grid-template-columns: 5fr 1fr 1fr;
   padding: 5px;
 }
+.textitemsearch {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns:1fr;
+  gap: 5px;
+  grid-template-rows: 150px 30px 30px;
+  padding: 5px;
+  justify-self: center;
+}
 .options {
   display: -ms-grid;
   display: grid;
@@ -431,7 +441,7 @@ nav {
   text-align: center;
 }
 #article-price , #article-name {
-  justify-self: flex-end;
+  justify-self: center;
   text-transform: capitalize;
   padding: 10px;
 }
@@ -489,6 +499,10 @@ nav {
 .diffrent-style img {
   width: 100%;
   height: 400px;
+}
+.description-item {
+  justify-self: center;
+  text-align: center;
 }
 .style-desc {
   display: -ms-grid;
@@ -647,12 +661,12 @@ footer {
 }
 .search-items {  
   width: 100%;
-  padding: 35px;
+  padding: 25px;
   height: 100%;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 100%;
-  font-size: 19px;
+  font-size: 17px;
 }
 .search-img {
   height: 100%;
